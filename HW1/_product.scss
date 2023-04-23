@@ -217,23 +217,20 @@
         display: flex;
         flex-direction: row;
         gap: 24px;
-        position: relative; 
+        // position: relative; 
         
         summary {
-            display: block;
-            position: relative;
-            // justify-content: center;
+            display: flex;
             align-items: center;
-
-
-            // !!!!!!!!!!!!!!!!!!!!!!
-            &.svg-position{
-                position: absolute;
-                margin-left: 9px;
-                align-items: center;               
-                // transform: translateY(50%);
-                // transform: translateX(-50%);
-                background: #6F6E6E;
+            gap: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $semiDarkColorofSite;
+           
+            &.svg-position {                
+                background: $semiDarkColorofSite;
             }
            
             
@@ -280,7 +277,7 @@
 
 .content-products{
 
-    &.margins{
+    &.paddings{
         padding-top: 129px;
         padding-bottom: 128px;
     }
