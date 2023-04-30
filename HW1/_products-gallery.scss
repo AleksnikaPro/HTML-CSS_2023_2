@@ -182,6 +182,7 @@ summary::-webkit-details-marker {
         gap: 9px;
         position: absolute;
         transform: translateX(-10px);
+        // left: -10px;
         min-width: 40px;
         z-index: 2;
         margin-top: 5px;
@@ -239,7 +240,7 @@ summary::-webkit-details-marker {
         
         &:hover path{
             fill: $mainColorOfSite;
-            @include transition-slow() ;
+            @include transition-slow();
         }
 
         &:active path{
