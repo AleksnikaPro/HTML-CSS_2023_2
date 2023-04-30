@@ -468,9 +468,8 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-content: center;
-  gap: 192px;
 }
 .button-box__btn {
   font-style: normal;
@@ -597,9 +596,7 @@ summary::-webkit-details-marker {
   color: #222222;
   border: 1px solid #4A4A4A;
   background: #FFFFFF;
-  padding-top: 13px;
-  padding-bottom: 16px;
-  padding-left: 17px;
+  padding: 13px 17px 16px;
   box-sizing: border-box;
 }
 .shipping__input::-moz-placeholder {
@@ -651,7 +648,8 @@ summary::-webkit-details-marker {
 .checkout-content {
   display: flex;
   flex-direction: column;
-  padding: 39px 34px 42px 44px;
+  padding-top: 39px;
+  padding-bottom: 42px;
   background: #F5F3F3;
 }
 .checkout-content__sub {
@@ -663,6 +661,7 @@ summary::-webkit-details-marker {
   line-height: 13px;
   color: #4A4A4A;
   margin-bottom: 12px;
+  margin-right: 42px;
 }
 .checkout-content__sub-price {
   padding-left: 20px;
@@ -681,6 +680,7 @@ summary::-webkit-details-marker {
   line-height: 19px;
   color: #222222;
   margin-bottom: 21px;
+  margin-right: 42px;
 }
 .checkout-content__grand-price {
   padding-left: 20px;
@@ -694,6 +694,8 @@ summary::-webkit-details-marker {
   height: 1px;
   margin-bottom: 17px;
   background: #E2E2E2;
+  margin-right: 42px;
+  margin-left: 42px;
 }
 .checkout-content__button-box {
   display: flex;
@@ -708,9 +710,8 @@ summary::-webkit-details-marker {
   line-height: 19px;
   color: #FFFFFF;
   background: #F16D7F;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0);
   padding: 16px 38px;
-  box-sizing: border-box;
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
@@ -722,6 +723,230 @@ summary::-webkit-details-marker {
 }
 .checkout-content__button:focus {
   outline: none !important;
+}
+
+.registration-top {
+  background: #F8F3F4;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.registration-top__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+}
+
+.registration-content {
+  display: grid;
+  grid-template-columns: 360px 652px;
+  grid-template-rows: 1fr;
+  grid-column-gap: 128px;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+.registration-content__left {
+  display: flex;
+  flex-direction: column;
+  /* для элемента label связанного с .custom-radio */
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  /* стили при наведении курсора на радио */
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  /* стили для радиокнопки, находящейся в фокусе */
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+}
+.registration-content__left .heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+.registration-content__left .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.registration-content__left .input {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #222222;
+  border: 1px solid #4A4A4A;
+  background: #FFFFFF;
+  padding: 13px 17px 16px;
+  box-sizing: border-box;
+}
+.registration-content__left .input::-moz-placeholder {
+  color: #B1B1B1;
+}
+.registration-content__left .input::placeholder {
+  color: #B1B1B1;
+}
+.registration-content__left .input:focus {
+  outline: none !important;
+  border: 1px solid #F16D7F;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+  transition: all 0.8s ease-out;
+}
+.registration-content__left .radio-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+.registration-content__left .custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.registration-content__left .custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.registration-content__left .custom-radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  transition: all 0.5s ease-out;
+}
+.registration-content__left .custom-radio:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #F16D7F;
+}
+.registration-content__left .custom-radio:not(:disabled):active + label::before {
+  background-color: #F16D7F;
+  border-color: #F16D7F;
+}
+.registration-content__left .custom-radio:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.13);
+}
+.registration-content__left .custom-radio:focus:not(:checked) + label::before {
+  border-color: #F16D7F;
+  transition: all 0.8s ease-out;
+}
+.registration-content__left .custom-radio:checked + label::before {
+  border-color: #A4A4A4;
+  background-color: #E5E5E5;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+.registration-content__left .custom-radio:disabled + label::before {
+  background-color: #E5E5E5;
+}
+.registration-content__left .label-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+.registration-content__left .text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  margin-top: 15px;
+  margin-bottom: 39px;
+}
+.registration-content__button-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.registration-content__button {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #F16D7F;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 16px 24px 17px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.registration-content__button:hover {
+  color: #F16D7F;
+  background: #FFFFFF;
+  border: 1px solid #F16D7F;
+  transition: all 0.8s ease-out;
+}
+.registration-content__button:hover path {
+  fill: #F16D7F;
+}
+.registration-content__button:focus {
+  outline: none !important;
+}
+.registration-content__button .btn-arrow {
+  margin-left: 20px;
+}
+.registration-content__right {
+  display: flex;
+  flex-direction: column;
+}
+.registration-content__right .heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  margin-bottom: 22px;
+}
+.registration-content__right .text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 21px;
+}
+.registration-content__right .list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px;
+  /* Отступ слева в браузере IE и Opera */
+  margin-left: 0;
+  /* Отступ слева в браузере Firefox, Safari, Chrome */
+  padding-left: 0px;
+}
+.registration-content__right .list__item {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  /* Убираем маркеры */
+  list-style-type: none;
+}
+.registration-content__right .list__item::before {
+  content: url(img/check-mark.svg);
+  margin-right: 22px;
 }
 
 @keyframes tracking-in-expand {
