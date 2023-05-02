@@ -46,25 +46,25 @@
             font-size: 14px;
             line-height: 17px;
             color: #636363;
-    
+
             &::after {
                 padding-left: 8px;
                 content: '/';
             }
-    
+
         }
 
         &__link_active {
             font-weight: 700;
             color: $mainColorOfSite;
-    
+
             &::after {
                 padding-left: 8px;
                 content: ' ';
             }
         }
 
-    }    
+    }
 
     &__link_active {
         font-weight: 700;
@@ -218,7 +218,7 @@
         flex-direction: row;
         gap: 24px;
         // position: relative; 
-        
+
         summary {
             display: flex;
             align-items: center;
@@ -228,12 +228,12 @@
             font-size: 14px;
             line-height: 17px;
             color: $semiDarkColorofSite;
-           
-            &.svg-position {                
+
+            &.svg-position {
                 background: $semiDarkColorofSite;
             }
-           
-            
+
+
         }
     }
 
@@ -270,21 +270,19 @@
         & path {
             fill: $mainColorOfSite;
         }
-    } 
+    }
 }
 
 // ******************products***********************
 
-.content-products{
+.content-products {
 
-    &.paddings{
+    &__product-paddings {
         padding-top: 129px;
         padding-bottom: 128px;
     }
-   
 }
-
-
 
 // ******************footer***********************
 
+@import 'product-media';

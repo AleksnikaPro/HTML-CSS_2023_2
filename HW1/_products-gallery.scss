@@ -15,23 +15,23 @@ summary::-webkit-details-marker {
 // ******************filter***********************
 
 .filter-sort {
-    // display: flex;
-    // flex-direction: row;
-    // gap: 30px;
-    // box-sizing: border-box;
-    // padding-top: 39px;
-    // position: relative;
-    // height: 134px;
-
-
-    display: grid;
-    grid-template-columns: repeat(2, 360px);
-    // grid-template-rows: 1fr;
-    grid-column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
     box-sizing: border-box;
     padding-top: 39px;
-    height: 134px;
     position: relative;
+    height: 134px;
+
+
+    // display: grid;
+    // grid-template-columns: repeat(2, 360px);
+    // // grid-template-rows: 1fr;
+    // grid-column-gap: 30px;
+    // box-sizing: border-box;
+    // padding-top: 39px;
+    // height: 134px;
+    // position: relative;
     
 }
 
@@ -142,9 +142,9 @@ summary::-webkit-details-marker {
 .sort {
     width: 360px;
     min-width: fit-content;
-    padding: 12px 16px 16px 0px;
+    padding: 12px 0px 16px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     gap: 28px;
     // position: relative;
 
@@ -202,11 +202,10 @@ summary::-webkit-details-marker {
 
 .content-products {
 
-    &.paddings {
+    &__products-gallery-paddings{
         padding-top: 0px;
         padding-bottom: 48px;
     }
-
 }
 
 // ******************pages***********************
@@ -271,3 +270,4 @@ summary::-webkit-details-marker {
 
 // ******************footer***********************
 
+@import 'product-gallery-media';

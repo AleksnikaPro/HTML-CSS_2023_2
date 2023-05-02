@@ -83,16 +83,10 @@ img {
         align-items: center;
         gap: 33px;
 
-        // &.header__check{
-
-        // }
-
-
     }
 
     .basket {
         position: relative;
-
 
         & span {
             position: absolute;
@@ -115,13 +109,15 @@ img {
 // прячем checkbox
 #burger {
     position: absolute;
-    left: -999999px;
+    // left
+    right: -999999px;
     visibility: hidden;
 
     // id burger
     &:checked~.burger__nav {
         // чтобы элемент появлялся и исчезал
         right: -$widthOfBurgerMenu;
+        box-shadow: none;
         // display: none;
     }
 
@@ -140,7 +136,9 @@ img {
     min-width: 232px;
     top: 81px;
     right: 0px;
-    transition: right .5s;
+    z-index: 12;
+    @include transition-fast();
+    // transition: right .5s;
 }
 
 .burger__top {
@@ -155,16 +153,6 @@ img {
     // padding-right: 0px;
     box-sizing: border-box;
     position: relative;
-
-    // &.svg{
-    //     align-self: flex-start;
-    //     // position: absolute;
-    //     // transform: translateX();
-    //     // transform: translateY(-50px);
-    //     
-
-    // }
-
 
 }
 
@@ -308,19 +296,11 @@ img {
         font-size: 32px;
         line-height: 38px;
         color: $darkColorOfSite;
-
-
     }
 
     span {
         color: $mainColorOfSite;
     }
-
-
-    // &__subtitle_colorful {
-    //     color: $mainColorOfSite;
-    // }
-
 
 }
 
@@ -394,8 +374,11 @@ img {
 .content-products {
     display: grid;
     justify-content: center;
-    padding-top: 96px;
-    // margin: 96px 0px 0px 0px;
+
+    &__index-paddings{
+        padding-top: 96px;
+        padding-bottom: 95px;
+    }
 
     &__title {
         font-style: normal;
@@ -518,7 +501,8 @@ img {
         display: grid;
         justify-content: center;
         align-content: center;
-        margin: 48px 0px 95px 0px;
+        // margin: 48px 0px 95px 0px;
+        margin-top: 48px;
     }
 
     &__browse {
@@ -762,3 +746,5 @@ img {
         }
     }
 }
+
+@import 'index-media';

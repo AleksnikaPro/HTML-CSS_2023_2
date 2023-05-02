@@ -77,7 +77,6 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
-    // gap: 192px;
 
     &__btn {
         // font-family: inherit;
@@ -230,7 +229,7 @@
     color: $darkColorOfSite;
     border: 1px solid $secondSemiDarkColorofSite;
     background: $lightColorOfSite;
-    padding: 13px 17px 16px;
+    padding: 12px 17px 15px;
     box-sizing: border-box;
 
     &::placeholder {
@@ -290,8 +289,7 @@
     flex-direction: column;
     // padding: 39px 34px 42px 44px;
     padding-top: 39px;
-    padding-bottom: 42px;
-    
+    padding-bottom: 42px;    
     background: #F5F3F3;
 
     &__sub {
@@ -377,3 +375,5 @@
         }
     }
 }
+
+@import 'cart-media';

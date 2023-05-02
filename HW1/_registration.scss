@@ -55,7 +55,7 @@
         .form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 21px;
         }
 
         .input {
@@ -250,7 +250,8 @@
             /* Отступ слева в браузере IE и Opera */
             margin-left: 0;
             /* Отступ слева в браузере Firefox, Safari, Chrome */
-            padding-left: 0px;
+            padding-left: 27px;
+            
 
             &__item {
                 font-style: normal;
@@ -259,12 +260,14 @@
                 line-height: 29px;
                 color: $thirdDarkColorOfSite;
                 /* Убираем маркеры */
-                list-style-type: none;
+                list-style-image: url(img/check-mark.svg);
+                padding-left: 22px;
+                
 
-                &::before {
-                    content: url(img/check-mark.svg);
-                    margin-right: 22px;
-                }
+                // &::before {
+                //     content: url(img/check-mark.svg);
+                //     margin-right: 22px;
+                // }
             }
         }
     }
@@ -272,3 +275,5 @@
 
 
 // **************footer*************************
+
+@import 'registration-media';
