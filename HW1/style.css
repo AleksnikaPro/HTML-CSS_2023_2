@@ -115,7 +115,6 @@
   background: #FFFFFF;
   min-height: 100px;
   margin: -65px auto 0px;
-  box-sizing: border-box;
   border: 1px solid #EAEAEA;
   position: relative;
   z-index: 10;
@@ -141,8 +140,8 @@
   color: #4D4D4D;
 }
 .product-info__text {
-  padding-top: 36px;
-  padding-bottom: 20px;
+  padding-top: 48px;
+  padding-bottom: 32px;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -150,7 +149,7 @@
   text-align: center;
   color: #5E5E5E;
   text-align: center;
-  max-width: 550px;
+  max-width: 555px;
 }
 .product-info__price {
   font-style: normal;
@@ -158,7 +157,7 @@
   font-size: 24px;
   line-height: 29px;
   color: #F16D7F;
-  padding-bottom: 52px;
+  padding-bottom: 65px;
 }
 .product-info__hr {
   display: block;
@@ -169,11 +168,12 @@
   border: none;
 }
 .product-info__filter {
-  padding-top: 52px;
-  padding-bottom: 36px;
+  padding-top: 65px;
+  padding-bottom: 48px;
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  flex-wrap: nowrap;
+  gap: 23px;
 }
 .product-info__filter summary {
   display: flex;
@@ -283,6 +283,31 @@
   .hide {
     display: none;
   }
+  /*new arrivals*/
+  .new-arrivals {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 24px;
+    padding-bottom: 46px;
+  }
+  /*product info*/
+  .product-info {
+    gap: 25px;
+  }
+  .product-info__text {
+    padding-top: 32px;
+  }
+  .product-info__price {
+    padding-bottom: 65px;
+  }
+  .product-info__filter {
+    padding-top: 49px;
+    padding-bottom: 64px;
+  }
+  .product-info__filter summary {
+    font-size: 10px;
+    line-height: 12px;
+  }
   /*products*/
   .content-products__product-paddings {
     padding-top: 64px;
@@ -351,7 +376,6 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  box-sizing: border-box;
   padding-top: 39px;
   position: relative;
   height: 134px;
@@ -360,7 +384,6 @@ summary::-webkit-details-marker {
 .filter {
   padding: 12px 16px 16px 0px;
   width: 360px;
-  box-sizing: border-box;
   z-index: 5;
   cursor: pointer;
 }
@@ -720,7 +743,6 @@ summary::-webkit-details-marker {
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  box-sizing: border-box;
   padding: 16px 40px 16px;
   border: 1px solid #A4A4A4;
   background: #FFFFFF;
@@ -811,7 +833,6 @@ summary::-webkit-details-marker {
   padding-top: 17px;
   padding-bottom: 92px;
   gap: 57px;
-  box-sizing: border-box;
 }
 .shipping-content__area {
   display: flex;
@@ -840,7 +861,6 @@ summary::-webkit-details-marker {
   border: 1px solid #4A4A4A;
   background: #FFFFFF;
   padding: 12px 17px 15px;
-  box-sizing: border-box;
 }
 .shipping__input::-moz-placeholder {
   color: #B1B1B1;
@@ -869,7 +889,6 @@ summary::-webkit-details-marker {
   font-size: 11px;
   line-height: 13px;
   color: #000000;
-  box-sizing: border-box;
   padding: 9px 14px 11px;
   border: 1px solid #4A4A4A;
   background: #FFFFFF;
@@ -1446,6 +1465,7 @@ summary::-webkit-details-marker {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -1543,7 +1563,6 @@ img {
   display: flex;
   padding-top: 16px;
   padding-left: 34px;
-  box-sizing: border-box;
   position: relative;
 }
 
@@ -1574,7 +1593,6 @@ img {
   padding-top: 24px;
   padding-bottom: 32px;
   padding-left: 34px;
-  box-sizing: border-box;
   position: relative;
 }
 
